@@ -1,0 +1,30 @@
+# Python & Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.env
+db.sqlite3
+/media
+/staticfiles
+
+# Docker
+*.pid
+*.sock
+.env.docker
+*.tar
+*.gz
+
+# Node
+node_modules/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Python virtual environment
+.venv/
+venv/
