@@ -8,5 +8,7 @@ class PatientProfile(models.Model):
     contact_number = models.CharField(max_length=20)
     address = models.TextField()
 
+    is_deleted = models.BooleanField(default=False)
+
     def __str__(self):
-        return self.user.username if self.user else "No User"
+        return self.user.email
