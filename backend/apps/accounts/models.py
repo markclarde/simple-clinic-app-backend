@@ -3,11 +3,11 @@ from django.db import models
 
 class User(AbstractUser):
     ROLE_CHOICES = (
-        ('user', 'User'),
+        ('patient', 'Patient'),
         ('doctor', 'Doctor'),
-        ('admin', 'Admin'),
     )
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='user')
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='patient')
 
     def __str__(self):
         return f"{self.username} ({self.role})"
+    

@@ -3,12 +3,12 @@ from apps.accounts.models import User
 
 class PatientProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    birth_date = models.DateField()
-    gender = models.CharField(max_length=10)
-    contact_number = models.CharField(max_length=20)
-    address = models.TextField()
-
+    first_name = models.CharField(max_length=100, blank=True, null=True)
+    last_name = models.CharField(max_length=100, blank=True, null=True)
+    gender = models.CharField(max_length=10, blank=True, null=True)
+    address = models.TextField(blank=True, null=True)
+    contact_number = models.CharField(max_length=20, blank=True, null=True)
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user.email
+        return f"Patient: {self.user.username}"

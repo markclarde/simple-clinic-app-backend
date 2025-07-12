@@ -8,11 +8,18 @@ class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-    def create(self, request, *args, **kwargs):
+    def create(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         self.perform_create(serializer)
+
+        role = serializer.data.get('role', 'patient')
+
         return Response(
-            {"message": "User registered successfully", "user": serializer.data},
+            {
+                "message": f"Account registered successfully as {role}",
+                "account": serializer.data
+            },
             status=status.HTTP_201_CREATED
         )
+    
