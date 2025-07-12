@@ -6,6 +6,8 @@ class DoctorProfile(models.Model):
     specialization = models.CharField(max_length=100, blank=True, null=True)
     license_no = models.CharField(max_length=50, blank=True, null=True)
     years_experience = models.IntegerField(blank=True, null=True)
+    clinic_address = models.TextField(blank=True, null=True)
+    contact_number = models.CharField(max_length=20, blank=True, null=True)
     bio = models.TextField(blank=True, null=True)
 
     is_deleted = models.BooleanField(default=False)

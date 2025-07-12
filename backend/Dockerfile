@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y netcat gcc libpq-dev \
+    && apt-get install -y netcat-openbsd gcc libpq-dev \
     && apt-get clean
 
 COPY requirements.txt .
