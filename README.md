@@ -1,6 +1,6 @@
 # Simple Clinic App Backend
 
-- Django REST
+- Django REST Framework
 - PostgreSQL
-- JWT Authorization
-- Docker
+- JSON Web Token
+- Docker Desktop
