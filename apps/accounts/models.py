@@ -6,6 +6,7 @@ class User(AbstractUser):
     last_name = None
 
     ROLE_CHOICES = (
+        ('admin', 'Admin'),
         ('patient', 'Patient'),
         ('doctor', 'Doctor'),
     )
