@@ -1,7 +1,6 @@
-# Simple Clinic App
+# Simple Clinic App Backend
 
-A full-stack clinic management app built with:
-
-- React (Vite) frontend
-- Django REST backend
-- PostgreSQL with Docker
+- Django REST
+- PostgreSQL
+- JWT Authorization
+- Docker
