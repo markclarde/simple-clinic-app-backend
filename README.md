@@ -37,7 +37,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 7. Run Django migrations
+### 6. Run Django migrations
 ```
 python manage.py makemigrations
 python manage.py migrate
@@ -45,7 +45,7 @@ python manage.py migrate
 - This will create all tables in your Postgres database.
 - You can verify in pgAdmin at `http://localhost:5050/`.
 
-### 8. Create superuser
+### 7. Create superuser
 ```
 python manage.py createsuperuser
 ```
