@@ -8,6 +8,7 @@ class PatientProfile(models.Model):
     gender = models.CharField(max_length=10, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
     contact_number = models.CharField(max_length=20, blank=True, null=True)
+    birthdate = models.DateField(blank=True, null=False)
     is_deleted = models.BooleanField(default=False)
 
     def __str__(self):
