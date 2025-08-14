@@ -6,11 +6,10 @@ class User(AbstractUser):
     last_name = None
 
     ROLE_CHOICES = (
-        ('admin', 'Admin'),
         ('patient', 'Patient'),
         ('doctor', 'Doctor'),
     )
-    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='patient')
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES)
 
     def __str__(self):
         return f"{self.username} ({self.role})"
